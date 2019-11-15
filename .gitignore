@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#Database Config files
+/private-config
+
 # Runtime data
 pids
 *.pid
