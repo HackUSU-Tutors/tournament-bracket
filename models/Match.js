@@ -5,7 +5,7 @@ const MatchSchema = mongoose.Schema({
         type: String,
         default: ""
     },
-    people: [
+    players: [
         {
             id: {
                 type: Number,

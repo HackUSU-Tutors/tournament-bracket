@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 app.use(express.static('public'));
 const connectDB = require('./db');
 
@@ -16,6 +16,7 @@ app.get('/', function (req, res) {
 
 app.use('/auth/login', require('./auth/login'));
 app.use('/auth/signup', require('./auth/signup'));
+app.use('/tournaments/', require('./tournaments/tournament'))
 
 
 app.listen(port, () => {console.log(`App Runing on Port ${port}`);});
