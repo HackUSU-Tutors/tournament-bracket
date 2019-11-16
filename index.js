@@ -7,6 +7,8 @@ const connectDB = require('./db');
 
 connectDB()
 
+app.use(express.json({ extended: false }));
+
 app.get('/', function (req, res) {
 	res.render('index', {name: 'Tournament'});
 });
