@@ -2,8 +2,9 @@ var express = require('express');
 var app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-var port = 5000; 
 const connectDB = require('./db');
+
+var port = 5000; 
 
 connectDB()
 
