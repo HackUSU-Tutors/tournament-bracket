@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
 
 app.use('/auth/login', require('./auth/login'));
 app.use('/auth/signup', require('./auth/signup'));
-app.use('/tournament/', require('./tournament/'))
+app.use('/tournaments/', require('./tournaments/tournament'))
 
 
 app.listen(port, () => {console.log(`App Runing on Port ${port}`);});
