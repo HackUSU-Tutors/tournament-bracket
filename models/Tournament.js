@@ -6,10 +6,10 @@ const TournamentSchema = mongoose.Schema
         type: String,
         required: true
     },
-    match: {
+    match: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user'
-    },
+        ref: 'match'
+    }],
 });
 
 module.exports = Tournament = mongoose.model('tournament', TournamentSchema);
