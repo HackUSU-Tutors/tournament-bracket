@@ -1,6 +1,8 @@
-const config = require('private-config/config');
-const mongoose = require('mongoose');
-const dbURL = config.get('mongouri');
+// const config = require('./private-config/config.json');
+const fs = require('fs');
+const config = JSON.parse(fs.readFileSync('./private-config/config.json', 'utf8'));
+const mongoose = require('mongoose'); 
+const dbURL = config['mongouri'];
 
 const connectDB = async () => {
     try{
@@ -18,3 +20,5 @@ const connectDB = async () => {
     }
 
 };
+
+module.exports = connectDB

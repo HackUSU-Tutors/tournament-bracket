@@ -25,6 +25,7 @@
     "ejs": "^2.7.2",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
+    "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.4",
     "mongoose": "^5.7.11",
