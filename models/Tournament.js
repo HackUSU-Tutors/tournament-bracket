@@ -6,9 +6,23 @@ const TournamentSchema = mongoose.Schema
         type: String,
         required: true
     },
-    match: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'match'
+    matches: [{
+        winner: {
+            type: String,
+            default: ""
+        },
+        players: [
+            {
+                id: {
+                    type: Number,
+                    required: true
+                },
+                name: {
+                    type: String,
+                    required: true
+                }
+            }
+        ]
     }],
 });
 
